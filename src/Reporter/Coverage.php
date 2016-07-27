@@ -199,11 +199,12 @@ class Coverage extends Terminal
      *
      * @param Metrics $metrics A metrics instance.
      */
-    protected function _renderCoverage($metrics)
+    public function _renderCoverage($metrics)
     {
         $stats = $metrics->data();
         foreach ($stats['files'] as $file) {
-            $this->write("File: {$file}" . "\n\n");
+            //$this->write("File: {$file}" . "\n\n");
+            $this->write("\n");
 
             $lines = file($file);
 
